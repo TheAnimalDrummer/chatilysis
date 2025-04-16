@@ -52,6 +52,7 @@ function formatFile() {
 }
 
 function analyzeFile() {
+
     let chrAnalysis = document.getElementById("dateAnalysis");
     let semAnalysis = document.getElementById("messageAnalysis");
     let mdAnalysis = document.getElementById("moodAnalysis");
@@ -107,7 +108,7 @@ function chronoAnalysis() {
 }
 
 function displayMonthYearCount(sortedMonthYearCount) {
-    const detailElement = document.createElement('details');
+    const detailElement = document.createElement('div');
     const heading = document.createElement('h3');
     heading.textContent = 'Nachrichten pro Jahr und Monat:';
     detailElement.appendChild(heading);
@@ -153,7 +154,7 @@ function semanticAnalysis() {
 }
 
 function displayWordCount(sortedWordCount) {
-    const detailElement = document.createElement('details');
+    const detailElement = document.createElement('div');
     const heading = document.createElement('h3');
     heading.textContent = 'Die meist genutzen Wörter:';
     detailElement.appendChild(heading);

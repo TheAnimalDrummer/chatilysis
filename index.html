@@ -12,8 +12,9 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="settings">
         <input id="fileUpload" type="file" accept=".txt" onchange="getFile(this)" />
+
 
         <div class="analysisOption">
             <input id="dateAnalysis" class="form-check-input" type="checkbox">
@@ -32,11 +33,38 @@
 
         <button type="button" class="btn btn-primary" onclick="analyzeFile()">Absenden</button>
     </div>
-    <div id="analysisContainer">
-        <div id="dateAnalysisContent"></div>
-        <div id="semAnalysisContent"></div>
-        <div id="moodAnalysisContent"></div>
-    </div>
+    <div id="analysisContainer" class="card p-3 w-50 m-auto ">
+        <!-- Carousel structure -->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- Date Analysis Content -->
+            <div class="carousel-item active" id="dateAnalysisContent">
+              <!-- Your content for date analysis goes here -->
+              <p>Date Analysis Content</p>
+            </div>
+            <!-- Sem Analysis Content -->
+            <div class="carousel-item" id="semAnalysisContent">
+              <!-- Your content for semantic analysis goes here -->
+              <p>Semantic Analysis Content</p>
+            </div>
+            <!-- Mood Analysis Content -->
+            <div class="carousel-item" id="moodAnalysisContent">
+              <!-- Your content for mood analysis goes here -->
+              <p>Mood Analysis Content</p>
+            </div>
+          </div>
+          <!-- Carousel controls -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon border border-2" aria-hidden="true" style="background-color: black;"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+            <span class="carousel-control-next-icon border border-2" aria-hidden="true" style="background-color: black;"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      
 </body>
 
 </html>
